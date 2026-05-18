@@ -457,6 +457,55 @@ Include:
 - Payment structure
 - Next step
 
+## Muiz Dev Solutions Website Direction
+
+For this project specifically, the website must sell trust, not only coding ability.
+
+Core positioning:
+
+- Muiz Dev Solutions helps businesses, NGOs, schools, startups, and service providers build professional websites, branded emails, and digital systems that improve trust, visibility, and customer communication.
+
+Sharper homepage message:
+
+- Websites, branded emails, and digital solutions for businesses that want to look serious online.
+
+The visitor should feel:
+
+- This person understands business.
+- This person can help me look professional.
+- This person can handle website, domain, email, and technical setup.
+- This person is reachable.
+- This person is serious.
+
+Recommended first-launch sitemap:
+
+- `/`
+- `/services`
+- `/projects`
+- `/about`
+- `/blog`
+- `/testimonials`
+- `/contact`
+
+Future expansion:
+
+- `/services/website-development`
+- `/services/business-email-setup`
+- `/services/domain-hosting`
+- `/services/seo-optimization`
+- `/services/website-maintenance`
+- `/services/custom-web-applications`
+- `/projects/gp-smith-accountax`
+- `/projects/hbsi-nigeria`
+- `/projects/mcben-leo-cares`
+- `/projects/loveview-estates`
+
+Detailed content and visual planning lives in:
+
+- `docs/content-system.md`
+- `docs/visual-asset-system.md`
+- `docs/research-notes.md`
+
 ## Portfolios And Case Studies
 
 Avoid generic 3-column project grids.
