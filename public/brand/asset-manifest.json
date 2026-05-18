@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-05-18T17:22:05.965Z",
+  "sourceFiles": {
+    "fullLogo": "public/muiz_full_logo_transparent.png",
+    "fullLogoWhite": "public/muiz_full_logo_white_only_transparent.png",
+    "fullLogoBlack": "public/muiz_full_logo_black_only_transparent.png",
+    "wordmark": "public/muiz_wordmark_only_transparent.png",
+    "square": "public/muiz_square_transparent.png",
+    "squareDark": "public/muiz_square_white_on_dark.png",
+    "faviconMark": "public/muiz_m_favicon_transparent_512.png",
+    "faviconMarkDark": "public/muiz_m_favicon_white_on_dark_512.png",
+    "text": "public/muiz_dev_solutions_text_transparent.png"
+  },
+  "outputs": {
+    "logos": "/brand/",
+    "icons": "/brand/icons/",
+    "favicon": "src/app/favicon.ico",
+    "appIcon": "src/app/icon.png",
+    "appleIcon": "src/app/apple-icon.png",
+    "openGraph": "src/app/opengraph-image.png",
+    "twitter": "src/app/twitter-image.png",
+    "manifest": "public/site.webmanifest"
+  }
+}
