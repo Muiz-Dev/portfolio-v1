@@ -103,3 +103,20 @@ Project rule:
 
 - Check the license for every downloaded visual before public use.
 - Prefer custom UI mockups and real screenshots over generic stock images.
+
+## 404 Illustration Asset
+
+Source:
+
+- https://scale.flexiple.com/illustrations/404-not-found-multi/
+- Downloaded SVG stored at `public/illustrations/not-found-scale.svg`
+
+Relevant notes:
+
+- Scale/Flexiple states its illustrations are royalty-free for commercial use and do not require attribution.
+- Their stated restriction is not to duplicate Scale, create a competitor product, or resell/repackage the illustrations themselves.
+
+Project implication:
+
+- The downloaded SVG can be used for the not-found page.
+- Keep the page copy and layout custom so the page does not feel like a generic downloaded 404 template.

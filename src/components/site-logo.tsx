@@ -9,18 +9,10 @@ export function SiteLogo() {
   return (
     <motion.div
       className="site-logo-frame"
-      initial={
-        shouldReduceMotion
-          ? { opacity: 0 }
-          : { opacity: 0, x: -10, clipPath: "inset(0 100% 0 0)" }
-      }
-      animate={
-        shouldReduceMotion
-          ? { opacity: 1 }
-          : { opacity: 1, x: 0, clipPath: "inset(0 0% 0 0)" }
-      }
+      initial={shouldReduceMotion ? false : { x: -6 }}
+      animate={shouldReduceMotion ? undefined : { x: 0 }}
       transition={{
-        duration: shouldReduceMotion ? 0.2 : 0.72,
+        duration: 0.42,
         ease: [0.22, 1, 0.36, 1],
       }}
     >
@@ -32,6 +24,19 @@ export function SiteLogo() {
         priority
         className="site-logo"
       />
+      {!shouldReduceMotion ? (
+        <motion.span
+          className="site-logo-sweep"
+          aria-hidden="true"
+          initial={{ opacity: 0, x: "-130%" }}
+          animate={{ opacity: [0, 0.5, 0], x: "130%" }}
+          transition={{
+            delay: 0.08,
+            duration: 0.82,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+      ) : null}
     </motion.div>
   );
 }
