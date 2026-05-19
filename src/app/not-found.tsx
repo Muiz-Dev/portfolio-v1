@@ -11,12 +11,11 @@ export default function NotFound() {
           <div className="not-found-copy">
             <p className="not-found-kicker">404 / Page not found</p>
             <h1 id="not-found-title" className="hero-title">
-              This page moved, but your project does not have to.
+              We could not find that page.
             </h1>
             <p className="not-found-text">
-              The link may be old, misspelled, or still waiting to be built.
-              Head back home or start a project request and we will point you in
-              the right direction.
+              The link may be old or mistyped. Head home or start a project
+              request.
             </p>
             <div className="not-found-actions">
               <Link className="not-found-primary" href="/">

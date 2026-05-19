@@ -120,3 +120,31 @@ Project implication:
 
 - The downloaded SVG can be used for the not-found page.
 - Keep the page copy and layout custom so the page does not feel like a generic downloaded 404 template.
+
+## Service Illustration Assets
+
+Source:
+
+- https://undraw.co/illustration/building-a-website_1wrp
+- https://undraw.co/illustration/emails_085h
+- https://undraw.co/illustration/setup-wizard_45kx
+- https://undraw.co/illustration/code-deployed_iwvu
+- https://undraw.co/illustration/mobile-app-data_2lfx
+
+Downloaded SVG files:
+
+- `public/illustrations/services/building-a-website.svg`
+- `public/illustrations/services/emails.svg`
+- `public/illustrations/services/setup-wizard.svg`
+- `public/illustrations/services/code-deployed.svg`
+- `public/illustrations/services/mobile-app-data.svg`
+
+Relevant notes:
+
+- unDraw says illustrations can be used in personal and commercial projects under its license.
+- The default unDraw accent color was recolored from `#6c63ff` to the project accent `#4b37ff`.
+
+Project implication:
+
+- Use these as one consistent illustration family for the services section.
+- Do not mix them with unrelated illustration styles in the same section.
