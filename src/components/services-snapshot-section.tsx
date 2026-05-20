@@ -4,11 +4,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import {
   ArrowRight02Icon,
-  BrowserIcon,
-  Database01Icon,
-  MailAtSign01Icon,
-  SecurityCheckIcon,
-  Settings02Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import gsap from "gsap";
@@ -66,7 +61,6 @@ export function ServicesSnapshotSection() {
       <div className="services-layout">
         <motion.article className="service-block service-website" whileHover={{ y: -4 }}>
           <div className="service-block-copy">
-            <HugeiconsIcon className="icon" icon={BrowserIcon} size={23} strokeWidth={2} />
             <p className="service-label">Core setup</p>
             <h3>Website Development</h3>
             <p>
@@ -100,7 +94,6 @@ export function ServicesSnapshotSection() {
         </motion.article>
 
         <motion.article className="service-block service-email" whileHover={{ y: -4 }}>
-          <HugeiconsIcon className="icon" icon={MailAtSign01Icon} size={22} strokeWidth={2} />
           <p className="service-label">Communication</p>
           <h3>Business Email Setup</h3>
           <p>
@@ -131,7 +124,6 @@ export function ServicesSnapshotSection() {
         </motion.article>
 
         <motion.article className="service-block service-domain" whileHover={{ y: -4 }}>
-          <HugeiconsIcon className="icon" icon={SecurityCheckIcon} size={22} strokeWidth={2} />
           <p className="service-label">Launch setup</p>
           <h3>Domain & Hosting</h3>
           <p>
@@ -161,7 +153,6 @@ export function ServicesSnapshotSection() {
 
         <motion.article className="service-block service-support" whileHover={{ y: -4 }}>
           <div>
-            <HugeiconsIcon className="icon" icon={Settings02Icon} size={22} strokeWidth={2} />
             <p className="service-label">After launch</p>
             <h3>Maintenance & Launch Support</h3>
             <p>
@@ -190,7 +181,6 @@ export function ServicesSnapshotSection() {
         </motion.article>
 
         <motion.article className="service-block service-apps" whileHover={{ y: -4 }}>
-          <HugeiconsIcon className="icon" icon={Database01Icon} size={22} strokeWidth={2} />
           <p className="service-label">Advanced option</p>
           <h3>Custom Web Applications</h3>
           <p>
