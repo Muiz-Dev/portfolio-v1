@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowUpRight01Icon,
@@ -8,6 +10,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PageRevealMotion } from "@/components/page-reveal-motion";
 import { ProjectRequestForm } from "@/components/project-request-form";
+import { motion, useReducedMotion } from "motion/react";
 
 const nextSteps = [
   "We review the request",
@@ -17,13 +20,34 @@ const nextSteps = [
 ];
 
 export function ContactPage() {
+  const shouldReduceMotion = useReducedMotion();
+  const headingText = "Tell us what you need built or fixed.";
+  const words = headingText.split(" ");
+
   return (
     <main className="contact-page">
       <PageRevealMotion />
       <section className="contact-page-hero" aria-labelledby="contact-page-title">
         <div data-page-reveal="left">
           <p className="contact-page-kicker">Start the conversation</p>
-          <h1 id="contact-page-title">Tell us what you need built or fixed.</h1>
+          <h1 id="contact-page-title">
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+              >
+                <motion.span
+                  style={{ display: "inline-block" }}
+                  initial="hidden"
+                  animate="show"
+                  variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.1 + i * 0.04 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            )).reduce((prev, curr) => [prev, " ", curr] as any)}
+          </h1>
         </div>
         <p data-page-reveal="right">
           Website, business email, domain setup, maintenance, or a custom app.

@@ -2105,9 +2105,9 @@ select {
 
 .projects-page-hero h1 {
   max-width: 820px;
-  font-size: clamp(42px, 5vw, 76px);
-  line-height: 0.98;
-  letter-spacing: 0;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 .projects-page-hero > p:last-child {
@@ -3434,8 +3434,8 @@ select {
   .project-clarity h2,
   .project-process h2 {
     max-width: 680px;
-    font-size: clamp(34px, 5.8vw, 48px);
-    line-height: 1;
+    font-size: clamp(28px, 4.5vw, 40px);
+    line-height: 1.08;
   }
 
   .projects-proof-head > p:last-child,
@@ -3762,16 +3762,19 @@ select {
   }
 
   .projects-page-hero h1 {
-    font-size: clamp(36px, 9.8vw, 52px);
+    font-size: clamp(28px, 7.5vw, 40px);
+    line-height: 1.08;
   }
 
   .services-page-hero h1,
   .contact-page-hero h1 {
-    font-size: clamp(34px, 8.6vw, 46px);
+    font-size: clamp(26px, 7vw, 38px);
+    line-height: 1.1;
   }
 
   .about-hero h1 {
-    font-size: clamp(34px, 8.6vw, 48px);
+    font-size: clamp(26px, 7vw, 38px);
+    line-height: 1.1;
   }
 
   .services-page-actions {

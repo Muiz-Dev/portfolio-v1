@@ -23,6 +23,9 @@ export function HomeHero() {
     ease: [0.22, 1, 0.36, 1] as const,
   };
 
+  const headingText = "Your business is serious. Your digital presence should prove it.";
+  const words = headingText.split(" ");
+
   return (
     <motion.section
       className="home-hero"
@@ -38,27 +41,36 @@ export function HomeHero() {
         >
           Websites / email / digital systems
         </motion.p>
-        <motion.h1
-          id="home-hero-title"
-          className="hero-title"
-          variants={textReveal}
-          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.16 }}
-        >
-          Make your business look serious online.
-        </motion.h1>
+        
+        <h1 id="home-hero-title" className="hero-title">
+          {words.map((word, i) => (
+            <span
+              key={i}
+              style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+            >
+              <motion.span
+                style={{ display: "inline-block" }}
+                variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.1 + i * 0.04 }}
+              >
+                {word}
+              </motion.span>
+            </span>
+          )).reduce((prev, curr) => [prev, " ", curr] as any)}
+        </h1>
+
         <motion.p
           className="home-hero-text"
           variants={textReveal}
-          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.26 }}
+          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.36 }}
         >
-          Muiz Dev Solutions helps businesses, NGOs, schools, startups, and
-          service providers build professional websites, branded emails, and
-          digital setups customers can trust.
+          We help business owners, NGOs, and service providers set up proper websites, custom emails, and secure digital foundations so they stop losing customers to a bad first impression.
         </motion.p>
+        
         <motion.div
           className="home-hero-actions"
           variants={textReveal}
-          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.36 }}
+          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.46 }}
         >
           <a className="home-hero-primary" href="/contact">
             <span>Start a Project</span>
@@ -81,12 +93,13 @@ export function HomeHero() {
             <span>Chat on WhatsApp</span>
           </a>
         </motion.div>
+        
         <motion.p
           className="home-hero-trust"
           variants={textReveal}
-          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.44 }}
+          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.54 }}
         >
-          Based in Lagos, Nigeria — working locally and remotely.
+          Based in Lagos, Nigeria — working with clients globally.
         </motion.p>
       </div>
 

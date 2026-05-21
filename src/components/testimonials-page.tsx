@@ -13,6 +13,8 @@ export function TestimonialsPageContent({
   quotes: ClientQuote[];
 }) {
   const shouldReduceMotion = useReducedMotion();
+  const headingText = "Don't just take our word for it.";
+  const words = headingText.split(" ");
   
   const allQuotes = quotes;
 
@@ -27,14 +29,27 @@ export function TestimonialsPageContent({
         >
           TESTIMONIALS
         </motion.p>
-        <motion.h1
+        <h1
           className="feedback-title"
-          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          style={{ marginBottom: "24px" }}
         >
-          Don&apos;t just take our word for it.
-        </motion.h1>
+          {words.map((word, i) => (
+            <span
+              key={i}
+              style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+            >
+              <motion.span
+                style={{ display: "inline-block" }}
+                initial="hidden"
+                animate="show"
+                variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.1 + i * 0.04 }}
+              >
+                {word}
+              </motion.span>
+            </span>
+          )).reduce((prev, curr) => [prev, " ", curr] as any)}
+        </h1>
         <motion.p
           className="feedback-subtitle"
           initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}

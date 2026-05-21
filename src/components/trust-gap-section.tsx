@@ -47,14 +47,22 @@ export function TrustGapSection() {
         <motion.p className="trust-gap-kicker" variants={reveal} transition={transition}>
           The trust gap
         </motion.p>
-        <motion.h2
-          id="trust-gap-title"
-          variants={reveal}
-          transition={{ ...transition, delay: shouldReduceMotion ? 0 : 0.08 }}
-        >
-          Serious businesses lose trust when their online presence feels
-          unfinished.
-        </motion.h2>
+        <h2 id="trust-gap-title">
+          {"Serious businesses lose trust when their online presence feels unfinished.".split(" ").map((word, i) => (
+            <span
+              key={i}
+              style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+            >
+              <motion.span
+                style={{ display: "inline-block" }}
+                variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: shouldReduceMotion ? 0 : 0.08 + i * 0.03 }}
+              >
+                {word}
+              </motion.span>
+            </span>
+          )).reduce((prev, curr) => [prev, " ", curr] as any)}
+        </h2>
         <motion.p
           className="trust-gap-text"
           variants={reveal}

@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PageRevealMotion } from "@/components/page-reveal-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 const principles = [
   {
@@ -28,13 +31,34 @@ const workTypes = [
 ];
 
 export function AboutPage() {
+  const shouldReduceMotion = useReducedMotion();
+  const headingText = "A practical digital studio for businesses that need to look serious online.";
+  const words = headingText.split(" ");
+
   return (
     <main className="about-page">
       <PageRevealMotion />
       <section className="about-hero" aria-labelledby="about-page-title">
         <div data-page-reveal="left">
           <p className="about-kicker">About</p>
-          <h1 id="about-page-title">A practical digital studio for businesses that need to look serious online.</h1>
+          <h1 id="about-page-title">
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+              >
+                <motion.span
+                  style={{ display: "inline-block" }}
+                  initial="hidden"
+                  animate="show"
+                  variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.1 + i * 0.04 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            )).reduce((prev, curr) => [prev, " ", curr] as any)}
+          </h1>
         </div>
         <p data-page-reveal="right">
           Muiz Dev Solutions helps businesses, NGOs, schools, startups, and service

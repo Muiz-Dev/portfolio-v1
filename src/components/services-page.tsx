@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,6 +14,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PageRevealMotion } from "@/components/page-reveal-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 const serviceTabs = [
   "Website",
@@ -94,13 +97,34 @@ const process = [
 ];
 
 export function ServicesPage() {
+  const shouldReduceMotion = useReducedMotion();
+  const headingText = "Digital setup for businesses that want to look professional online.";
+  const words = headingText.split(" ");
+
   return (
     <main className="services-page">
       <PageRevealMotion />
       <section className="services-page-hero" aria-labelledby="services-page-title">
         <div data-page-reveal="left">
           <p className="services-page-kicker">Services</p>
-          <h1 id="services-page-title">Digital setup for businesses that want to look professional online.</h1>
+          <h1 id="services-page-title">
+            {words.map((word, i) => (
+              <span
+                key={i}
+                style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom" }}
+              >
+                <motion.span
+                  style={{ display: "inline-block" }}
+                  initial="hidden"
+                  animate="show"
+                  variants={shouldReduceMotion ? { hidden: { opacity: 0 }, show: { opacity: 1 } } : { hidden: { y: "100%", opacity: 0 }, show: { y: "0%", opacity: 1 } }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.1 + i * 0.04 }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            )).reduce((prev, curr) => [prev, " ", curr] as any)}
+          </h1>
         </div>
         <div className="services-page-hero-aside" data-page-reveal="right">
           <p>
