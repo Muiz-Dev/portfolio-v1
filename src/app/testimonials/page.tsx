@@ -14,7 +14,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/testimonials",
 });
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export default async function TestimonialsPage() {
   // Fetch approved reviews from DB
