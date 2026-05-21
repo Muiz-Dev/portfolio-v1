@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ?? "your_google_site_verification_token",
   },
   robots: {
     index: true,
