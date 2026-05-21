@@ -5,6 +5,7 @@ import { HomeHero } from "@/components/home-hero";
 import { ProjectClaritySection } from "@/components/project-clarity-section";
 import { ProjectProcessSection } from "@/components/project-process-section";
 import { ProjectsProofSection } from "@/components/projects-proof-section";
+import { ScrollTopControl } from "@/components/scroll-top-control";
 import { ServicesSnapshotSection } from "@/components/services-snapshot-section";
 import { SiteFooter } from "@/components/site-footer";
 import { TrustGapSection } from "@/components/trust-gap-section";
@@ -24,6 +25,7 @@ export default function Home() {
         <FinalCtaSection />
       </main>
       <SiteFooter />
+      <ScrollTopControl />
     </>
   );
 }

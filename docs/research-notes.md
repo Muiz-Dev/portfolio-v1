@@ -148,3 +148,26 @@ Project implication:
 
 - Use these as one consistent illustration family for the services section.
 - Do not mix them with unrelated illustration styles in the same section.
+
+## Footer Social Icons
+
+Source:
+
+- https://simpleicons.org/
+- Downloaded through `https://cdn.simpleicons.org/`
+
+Downloaded SVG files:
+
+- `public/icons/social/facebook.svg`
+- `public/icons/social/gmail.svg`
+- `public/icons/social/instagram.svg`
+- `public/icons/social/x.svg`
+- `public/icons/social/linkedin.svg`
+- `public/icons/social/fiverr.svg`
+- `public/icons/social/github.svg`
+
+Project implication:
+
+- Use these only as compact social/link icons in the footer.
+- Keep social URLs as placeholders until the real profile links are available.
+- Icons use the Simple Icons brand colors where available: Facebook `#0866FF`, Gmail `#EA4335`, Instagram `#FF0069`, X `#000000`, Fiverr `#1DBF73`, GitHub `#181717`; LinkedIn is set to the widely used brand blue `#0A66C2`.

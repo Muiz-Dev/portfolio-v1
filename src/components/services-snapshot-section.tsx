@@ -73,22 +73,17 @@ export function ServicesSnapshotSection() {
               <span />
               <span />
               <span />
-              <p>business-site</p>
+              <p>gpsmithaccountax.co.uk</p>
             </div>
-            <div className="service-visual-piece service-illustration-stage service-website-art">
+            <div className="service-visual-piece service-site-preview">
               <Image
-                src="/illustrations/services/building-a-website.svg"
+                src="/projects/gp-smith-desktop-crop.webp"
                 alt=""
-                width={420}
-                height={260}
+                width={920}
+                height={805}
                 loading="lazy"
                 aria-hidden="true"
               />
-            </div>
-            <div className="service-visual-piece service-phone-preview">
-              <span />
-              <span />
-              <span />
             </div>
           </div>
         </motion.article>
@@ -163,10 +158,10 @@ export function ServicesSnapshotSection() {
           <div className="service-illustration-stage service-support-art" aria-hidden="true">
             <Image
               className="service-visual-piece"
-              src="/illustrations/services/code-deployed.svg"
+              src="/projects/loveview-card-crop.webp"
               alt=""
-              width={300}
-              height={190}
+              width={720}
+              height={506}
               loading="lazy"
               aria-hidden="true"
             />
