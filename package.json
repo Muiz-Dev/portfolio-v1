@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "assets:brand": "node scripts/generate-brand-assets.mjs",
+    "assets:seo": "node scripts/generate-seo-images.mjs",
     "start": "next start",
     "lint": "eslint"
   },

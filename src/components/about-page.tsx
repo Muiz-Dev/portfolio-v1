@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -56,15 +55,6 @@ export function AboutPage() {
         </div>
 
         <aside className="about-operator-card" data-page-reveal="right">
-          <div className="about-operator-image">
-            <Image
-              src="/about/muiz-adesope-profile.webp"
-              alt="Muiz Adesope"
-              width={900}
-              height={1100}
-              sizes="(max-width: 1023px) 100vw, 360px"
-            />
-          </div>
           <p>Led by</p>
           <h3>Muiz Adesope</h3>
           <span>
