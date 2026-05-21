@@ -72,6 +72,7 @@ export function SiteFooter() {
           <p>Contact</p>
           <a href="mailto:info@muizdev.xyz">info@muizdev.xyz</a>
           <span>Lagos, Nigeria</span>
+          <a href="https://www.muizdev.xyz" target="_blank" rel="noreferrer">Personal portfolio</a>
           <div className="site-footer-social" aria-label="Social links">
             {socialLinks.map((social) => (
               <a
