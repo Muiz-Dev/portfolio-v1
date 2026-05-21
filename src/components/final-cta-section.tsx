@@ -36,7 +36,7 @@ export function FinalCtaSection() {
             <span>Start a Project</span>
             <HugeiconsIcon className="icon" icon={ArrowUpRight01Icon} size={17} strokeWidth={2} />
           </a>
-          <a className="final-cta-secondary" href="https://wa.me/">
+          <a className="final-cta-secondary" href="https://wa.me/2348124604571">
             <HugeiconsIcon
               className="final-cta-whatsapp icon"
               icon={WhatsappIcon}

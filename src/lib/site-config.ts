@@ -7,6 +7,8 @@ export const siteConfig = {
   locale: "en_NG",
   language: "en-NG",
   email: "info@muizdev.xyz",
+  whatsapp: "+2348124604571",
+  whatsappUrl: "https://wa.me/2348124604571",
   location: "Lagos, Nigeria",
   founder: {
     name: "Muiz Adesope",
@@ -109,7 +111,72 @@ export const siteConfig = {
       image: "/projects/africonnect-exchange-card.webp",
     },
   ],
-} as const;
+  feedback: [
+    {
+      type: "quote",
+      id: "quote-1",
+      client: "Sarah Jenkins",
+      role: "Operations Director",
+      business: "Pinnacle Logistics",
+      image: "https://i.pravatar.cc/150?img=47",
+      rating: 5,
+      quote: "Muiz completely transformed how our business looks online. The website is incredibly fast, and setting up our professional emails was seamless. We've already seen an increase in inbound inquiries.",
+      service: "Website Development",
+      featured: true,
+    },
+    {
+      type: "quote",
+      id: "quote-2",
+      client: "David O.",
+      role: "Founder",
+      business: "AfriConnect",
+      image: "https://i.pravatar.cc/150?img=11",
+      rating: 5,
+      quote: "Working with Muiz was the best technical decision we made this year. He didn't just write code; he understood the business problem we were trying to solve. Highly recommended.",
+      service: "Custom Web Applications",
+    },
+    {
+      type: "quote",
+      id: "quote-3",
+      client: "Elena Rostova",
+      role: "Marketing Head",
+      business: "Lumina Real Estate",
+      image: "https://i.pravatar.cc/150?img=5",
+      rating: 5,
+      quote: "Before, our property listings were messy and hard to navigate. The new system is clean, professional, and buyers can reach out directly on WhatsApp with one tap. Brilliant execution.",
+      service: "Website Development",
+    },
+    {
+      type: "quote",
+      id: "quote-4",
+      client: "Michael T.",
+      role: "CEO",
+      business: "TechFlow Solutions",
+      image: "https://i.pravatar.cc/150?img=33",
+      rating: 5,
+      quote: "A true professional. Delivered exactly on time, the design is pixel-perfect, and the backend is solid. We'll definitely be working together again on future projects.",
+      service: "Website Development",
+    },
+  ] as const,
+};
+
+export type ClientQuote = {
+  type: "quote";
+  id: string;
+  client: string;
+  business: string;
+  quote: string;
+  rating: 1 | 2 | 3 | 4 | 5;
+  image?: string;
+  service: string;
+  role?: string;
+  industry?: string;
+  projectSlug?: string;
+  year?: string;
+  featured?: boolean;
+};
+
+export type ClientFeedback = ClientQuote;
 
 export function absoluteUrl(path = "/") {
   if (path.startsWith("http://") || path.startsWith("https://")) {

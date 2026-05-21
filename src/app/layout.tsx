@@ -5,6 +5,7 @@ import {
   IBM_Plex_Sans,
 } from "next/font/google";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { CookieBanner } from "@/components/cookie-banner";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -88,7 +89,6 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     title: "Muiz Dev Solutions",
-    capable: true,
     statusBarStyle: "default",
   },
   formatDetection: {
@@ -114,7 +114,10 @@ export default function RootLayout({
       lang="en"
       className={`${bricolage.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

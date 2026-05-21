@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const footerLinks = ["Home", "Services", "Projects", "About", "Blog", "Testimonials", "Contact"];
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+  { label: "Feedback", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
+];
 
 const serviceLinks = [
   "Website Development",
@@ -51,8 +59,8 @@ export function SiteFooter() {
             <p>Pages</p>
             <ul>
               {footerLinks.map((link) => (
-                <li key={link}>
-                  <Link href={link === "Home" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
+                <li key={link.label}>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>

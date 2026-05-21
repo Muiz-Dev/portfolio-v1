@@ -70,7 +70,7 @@ export function HomeHero() {
               aria-hidden="true"
             />
           </a>
-          <a className="home-hero-secondary" href="https://wa.me/">
+          <a className="home-hero-secondary" href="https://wa.me/2348124604571">
             <HugeiconsIcon
               className="home-hero-whatsapp-icon icon"
               icon={WhatsappIcon}
