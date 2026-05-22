@@ -4,11 +4,17 @@ const globalForPg = globalThis as unknown as {
   pgPool: Pool | undefined;
 };
 
-// Strip sslrootcert file-path param — node-postgres uses the ssl object, not
-// the query string cert path, so leaving it in causes a connection error.
+// Strip all SSL query params from the connection string.
+// node-postgres parses sslmode=verify-full and sets rejectUnauthorized: true
+// internally, which overrides the ssl object we pass to Pool. We control SSL
+// entirely through the ssl config object below instead.
 function getConnectionString() {
   const url = process.env.DATABASE_URL || "";
-  return url.replace(/[&?]sslrootcert=[^&]*/g, "");
+  return url
+    .replace(/[&?]sslmode=[^&]*/g, "")
+    .replace(/[&?]sslrootcert=[^&]*/g, "")
+    .replace(/[&?]sslcert=[^&]*/g, "")
+    .replace(/[&?]sslkey=[^&]*/g, "");
 }
 
 const sslConfig = process.env.DATABASE_CA_CERT
