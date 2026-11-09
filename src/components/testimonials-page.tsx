@@ -58,6 +58,9 @@ export function TestimonialsPageContent({
         >
           Read what businesses, organizations, and service providers have to say about working with Muiz Dev Solutions.
         </motion.p>
+        <p className="feedback-review-prompt">
+          Worked with us? <Link href="/review">Leave a review.</Link>
+        </p>
       </section>
 
       <section className="proof-wall-section">

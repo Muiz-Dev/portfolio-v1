@@ -4621,6 +4621,17 @@ select {
   max-width: 600px;
 }
 
+.feedback-review-prompt {
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.feedback-review-prompt a {
+  color: #4b37ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .proof-wall-section {
   padding: 0 clamp(24px, 5vw, 72px) clamp(80px, 10vw, 140px);
 }
